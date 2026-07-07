@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Style</title>
+</head>
+<body>
+
+    <h1>Input Field Style</h1>
+
+    <input id="user" type="text" placeholder="Enter user name">
+
+    <br><br>
+
+    <button onclick="handlestyle()">Change Style</button>
+
+    <br><br>
+
+    <input oninput="handlewidth(event)" type="range" min="100" max="500" step="10">
+
+    <script>
+
+        // Initial color
+        document.getElementById("user").style.color = "orange";
+
+        function handlestyle() {
+            let inputstyle = document.getElementById("user").style;
+
+            inputstyle.color = "red";
+            inputstyle.width = "300px";
+            inputstyle.height = "50px";
+            inputstyle.fontSize = "20px";
+        }
+
+        function handlewidth(event) {
+            document.getElementById("user").style.width =
+                event.target.value + "px";
+        }
+
+    </script>
+
+</body>
+</html>
